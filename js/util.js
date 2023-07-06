@@ -8,10 +8,14 @@ export function toHidden(node) {
 
 export function validatePrice(currentFunds, currentAmount) {
   // TODO: 금액이 현재 자산보다 이하인지
-  return true;
+  return currentFunds>=currentAmount;
 }
 
 export function validateRequired({ category, description, price }) {
   // TODO: 값이 존재하는지
-  return true;
+  // category, description : "", null, undefined
+  // price : 0, undefined
+  return (
+    Boolean(category) && Boolean(description) && Boolean(price) && price > 0 
+  );
 }

@@ -39,6 +39,7 @@ function addCurrentAssetEventListener() {
 export function renderCurrentAsset() {
   // TODO: 숫자에 콤마 작성
   // TODO: currentFunds가 없는 경우
-  $currentAssetValue.textContent = store.currentFunds ?? "-";
+  // 삼항연산자, 옵셔널 체이닝
+  $currentAssetValue.textContent = store.currentFunds?.toLocaleString() ?? "-";
   $currentAssetInput.value = store.currentFunds;
 }
