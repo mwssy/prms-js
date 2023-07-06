@@ -1,5 +1,5 @@
-import { renderCurrentAsset } from "../components/current-asset";
-import { store, removeHistory } from "../store";
+import { renderCurrentAsset } from "../components/current-asset.js";
+import { store, removeHistory } from "../store.js";
 
 const $sectionHistory = document.querySelector(".history");
 
