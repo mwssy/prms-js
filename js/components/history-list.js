@@ -46,7 +46,7 @@ export function renderHistoryList() {
 
       ${detail
         .sort((a,b)=>b.id-a.id)
-        .map(({description, category, amount, fundsAtTheTime, createAt})=>{
+        .map(({description, category, amount, fundsAtTheTime, createAt, id})=>{
       
         const time=new Date(createAt).toLocaleTimeString("ko-kr",{
           timeStyle: "short",
@@ -69,7 +69,7 @@ export function renderHistoryList() {
             </div>
           </div>
           <div class="delete-section">
-            <button class="delete-button" data-dateid=${dateID} data-itemid=${id}>🗑</button>
+            <button class="delete-button" data-dateid=${dateId} data-itemid=${id}>🗑</button>
           </div>
         </section>
         <section class="history-item-caption">

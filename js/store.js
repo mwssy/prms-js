@@ -79,11 +79,13 @@ export function removeHistory(dateId, itemId) {
      * - store.currentFunds 새로 갱신
      */
     //기존 배열->삭제할 요소를 제거한 배열->재할당
-    store.detailList[dateId] = store.detailList[dateId].filter(({id,amount}) => {
+    //store.detailList[dateId] = null;
+    
+    store.detailList[dateId] = store.detailList[dateId].filter(({ id, amount }) => {
       if(id===Number(itemId)){
-        store.currentFunds += amount
+        store.currentFunds += amount;
       }
-      return id !== Nunber(itemId);
+      return id !== Number(itemId);
     });
 
     updateStorage();
